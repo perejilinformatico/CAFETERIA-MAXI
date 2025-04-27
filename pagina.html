@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina de cafe</title>
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+      }
+      #titulo {
+        animation: rain 3s infinite;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 60px;
+        background-color: gray;
+        border: solid gray 4px;
+        border-radius: 10px;
+        text-align: center;
+      }
+      @keyframes rain {
+        0% {color: brown;}
+        50% {color: burlywood;}
+        100% {color: black;}
+      }
+      #oos {
+        color: white;
+        border: solid black 3px;
+        border-radius: 10px;
+        background-color: gray;
+        width: 150px;
+        height: 50px;
+      }
+    </style>
+    <script>
+      function enviarMensaje() {
+        var numero = "5491153194250"; 
+        var mensaje = "Hola, quiero un cafe normal porfavor"; 
+        var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
+        window.open(url, "_blank");
+      }
+      function enviarMensaje1() {
+        var numero = "5491153194250"; 
+        var mensaje = "Hola, quiero un sutil equilibrado porfavor"; 
+        var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
+        window.open(url, "_blank");
+      }
+      function enviarMensaje2() {
+        var numero = "5491153194250"; 
+        var mensaje = "Hola, quiero un cortado expreso porfavor"; 
+        var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
+        window.open(url, "_blank");
+      }
+      function enviarMensaje3() {
+        var numero = "5491153194250"; 
+        var mensaje = "Hola, quiero un capuchino porfavor"; 
+        var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
+        window.open(url, "_blank");
+      }
+      function enviarMensaje4() {
+        var numero = "5491153194250"; 
+        var mensaje = "Hola, quiero un capuchino con nutella porfavor"; 
+        var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
+        window.open(url, "_blank");
+      }
+    </script>
+</head>
+<body>
+    <h1 id="titulo">La cafeteria de maxi</h1>
+   <img src="WhatsApp Image 2025-04-26 at 21.32.19.jpeg" width="500px" height="300px" style="overflow: content;">
+    <h2>la mejor cafeteria</h2>
+    <iframe width="400" height="715" 
+    src="WhatsApp Video 2025-04-26 at 21.41.59.mp4">
+      </iframe>
+    <br>
+    <br>
+    <h2>Elige el cafe que quieres pedir: </h2>
+    <ul>
+        <li><input type="button" value="cafe normal" onclick="enviarMensaje()" id="oos"</li>
+        <br>
+        <br>
+        <li><input type="button" value="sutil equilibrado" onclick="enviarMensaje1()" id="oos"</li>
+        <br>
+        <br>
+        <li><input type="button" value="cortado expreso" onclick="enviarMensaje2()" id="oos"</li>
+        <br>
+        <br>
+        <li><input type="button" value="capuchino" onclick="enviarMensaje3()" id="oos"</li>
+        <br>
+        <br>
+        <li><input type="button" value="capuchino con Nutella" onclick="enviarMensaje4()" id="oos"</li>
+    </ul>
+    <br>
+    <br>
+    <br>
+</body>
+</html>
