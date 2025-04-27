@@ -29,39 +29,56 @@
         background-color: gray;
         width: 150px;
         height: 50px;
+      } #nombre {
+        background-color: rgb(0, 0, 0);
+        font-family: monospace;
+        border: solid black 4px;
+        border-radius: 5px;
+        color: white;
+        width: 100px;
+        height: 30px;
       }
     </style>
     <script>
       function enviarMensaje() {
         var numero = "5491153194250"; 
-        var mensaje = "Hola, quiero un cafe normal porfavor"; 
+        var mensaje = "Hola, quiero un cafe normal porfavor a nombre de: " + nombre; 
         var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
         window.open(url, "_blank");
       }
       function enviarMensaje1() {
         var numero = "5491153194250"; 
-        var mensaje = "Hola, quiero un sutil equilibrado porfavor"; 
+        var mensaje = "Hola, quiero un sutil equilibrado porfavor a nombre de: " + nombre; 
         var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
         window.open(url, "_blank");
       }
       function enviarMensaje2() {
         var numero = "5491153194250"; 
-        var mensaje = "Hola, quiero un cortado expreso porfavor"; 
+        var mensaje = "Hola, quiero un cortado expreso porfavor  a nombre de: "  + nombre; 
         var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
         window.open(url, "_blank");
       }
       function enviarMensaje3() {
         var numero = "5491153194250"; 
-        var mensaje = "Hola, quiero un capuchino porfavor"; 
+        var mensaje = "Hola, quiero un capuchino porfavor a nombre de: " + nombre; 
         var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
         window.open(url, "_blank");
       }
       function enviarMensaje4() {
         var numero = "5491153194250"; 
-        var mensaje = "Hola, quiero un capuchino con nutella porfavor"; 
+        var mensaje = "Hola, quiero un capuchino con nutella porfavor a nombre de: " + nombre; 
         var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
         window.open(url, "_blank");
       }
+      function ayuda() {
+        const nombre = document.getElementById("nombre");
+        console.log("listo rey");
+        Nombretrue();
+      }
+       function Nombretrue() {
+        document.getElementById("truenombre").innerHTML = "Ya pusiste tu nombre";
+        document.getElementById("jaja").innerHTML = "No lo cambies";
+       }
     </script>
 </head>
 <body>
@@ -73,7 +90,18 @@
       </iframe>
     <br>
     <br>
-    <h2>Elige el cafe que quieres pedir: </h2>
+    <h2>(IMPORTANTE) primero introdusca su nombre: </h2>
+    <input type="text" id="nombre">
+    <br>
+    <br>
+    <button id="oos" onclick="ayuda()">Aseptar</button>
+    <br>
+    <br>
+    <h2 id="truenombre">...</h2>
+    <h2 id="jaja"></h2>
+    <br>
+    <br>
+    <h2>Segundo elige el cafe que quieres pedir: </h2>
     <ul>
         <li><input type="button" value="cafe normal" onclick="enviarMensaje()" id="oos"</li>
         <br>
